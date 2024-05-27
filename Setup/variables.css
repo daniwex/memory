@@ -1,0 +1,18 @@
+:root{
+    --yellow--: #FDA214;
+    --light--blue: #bcced9;
+    --dark--blue: #304859;
+    --darkest--blue: #152938;
+    --white--hard: #F2F2F2;
+    --white: #fcfcfc;
+    --darker--blue: #6395B8;
+    --grey--blue: #7191A5;
+}
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+}

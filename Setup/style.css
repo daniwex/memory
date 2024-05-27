@@ -1,0 +1,74 @@
+@import url('./variables.css');
+
+:root{
+    --numofEl-- : 4
+}
+
+body{
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    --numofEl--: attr(numofel)
+}
+header{
+    height: 50px;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+button.btn{
+    padding: 10px 20px;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+button.btn:first-child{
+    background-color: var(--yellow--);
+    color: #FFF;
+}
+.gridContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    height: 70vh;
+    align-items: center;
+}
+.gridContainer div{
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    width: fit-content;
+}
+.grid-class{
+    border-radius: 50%;
+    background-color: var(--darkest--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    width: 65px;
+    cursor: pointer;
+}
+.stats-container{
+    height: 17vh;
+    display: flex;
+    justify-content: center;
+}
+.stats-container > span{
+    display: inline-block;
+    margin: 0 20px;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: var( --light--blue);
+    font-size: .7rem;
+    color: var(--grey--blue);
+}
+#timer, #move{
+    font-size: 1rem;
+    color: #000;
+}

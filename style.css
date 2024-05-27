@@ -1,0 +1,96 @@
+@import url('./Setup/variables.css');
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: var(--darkest--blue);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+.memory-menu{
+    color: white;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    height: 75vh;
+}
+.inner-menu{
+    height: 80%;
+    width: 35vw;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    padding: 40px 30px;
+}
+.memory-menu h2{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.options{
+    height: calc(100% / 4);
+    margin-bottom: 1rem;
+    display: block;
+}
+.option-header{
+    color: var(--grey--blue);
+}
+.inner-menu a#start{
+    width: 100%;
+    background-color: var(--yellow--);
+    color: #FFF;
+    padding: 15px;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+.theme, #players{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.theme span{
+    display: inline-block;
+    width: 48%;
+    background-color: var(--light--blue);
+    padding: 15px;
+    border-radius: 2rem;
+    text-align: center;
+}
+.theme span:hover, #players span:hover{
+    cursor: pointer;
+}
+#players span{
+    width: 24%;
+    background-color: var(--light--blue);
+    padding: 15px;
+    border-radius: 2rem;
+    text-align: center;
+}
+.theme span.selected, #players span.selected{
+    background-color: var(--darkest--blue);
+}
+
+
+@media screen and (max-width: 920px) {
+    body{
+        padding: 20px;
+    }
+    .inner-menu{
+        width: 90vw;
+    }
+}
+@media screen and (max-width: 400px) {
+
+}
+@media screen and (min-width: 2500px) {
+    .memory-menu{
+        height: 55%;
+    }
+    .inner-menu{
+        width: 20vw;
+    }
+}

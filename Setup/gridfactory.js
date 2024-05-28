@@ -1,15 +1,16 @@
-class Grid{
-    constructor(num){
+class Grid {
+    constructor(num) {
         this.num = num
     }
-    createGrid(parent, parentClassName, childrenClassName){
+    createGrid(parent, parentClassName, childrenClassName) {
         // create grid like container for elements
         let p = document.createElement('div')
         let c = document.createElement('div')
-        for(let i=0;i<Math.pow(this.num,2);i++){
+        for (let i = 0; i < Math.pow(this.num, 2); i++) {
             const span = document.createElement('span');
             span.setAttribute('class', childrenClassName)
-            span.innerText = i
+            span.innerText = i % Math.floor((Math.pow(this.num, 2)) / 2)
+            span.style.color = '#152938'
             c.appendChild(span)
         }
         p.setAttribute('class', parentClassName)
@@ -17,8 +18,8 @@ class Grid{
         p.appendChild(c)
         parent.appendChild(p)
     }
-    createStats(numofplayers, parent, parentClassName){
-        if(numofplayers == 1){
+    createStats(numofplayers, parent, parentClassName) {
+        if (numofplayers == 1) {
             const el = document.createElement('div')
             el.setAttribute('class', parentClassName)
             const time = document.createElement('span')
@@ -38,7 +39,15 @@ class Grid{
             parent.appendChild(el)
         }
     }
-   
+    shuffle(grid){
+        for(let i=0;i< Math.floor(Math.pow(this.num,2));i++){
+            let random = Math.floor(Math.random() * Math.pow(this.num,2));
+            let temp = grid[random].innerText
+            grid[random].innerText = grid[i].innerText;
+            grid[i].innerText = temp
+        }
+    }
+
 }
 
 
